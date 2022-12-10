@@ -4,12 +4,12 @@ const {
   totalCaloriesCarriedByTopThreeElves,
 } = require('./day-1/calorie-counting');
 
-const dayOneList = fs.readFileSync('src/day-1/list.txt', 'UTF-8');
+const caloriesList = fs.readFileSync('src/day-1/input.txt', 'UTF-8');
 
 const answers = {
   'Day 1: Calorie Counting': {
-    'Part One': findMostCaloriesCarried(dayOneList),
-    'Part Two': totalCaloriesCarriedByTopThreeElves(dayOneList),
+    'Part One': findMostCaloriesCarried(caloriesList),
+    'Part Two': totalCaloriesCarriedByTopThreeElves(caloriesList),
   },
 };
 
