@@ -11,6 +11,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "answers": "node src/answers",
     "lint": "npx eslint src",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier src --check",
