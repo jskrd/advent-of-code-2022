@@ -1,24 +1,20 @@
 const fs = require('node:fs');
-const {
-  findMostCaloriesCarried,
-  totalCaloriesCarriedByTopThreeElves,
-} = require('./day-1/calorie-counting');
-const {
-  totalScoreWithWhatYouShouldPlay,
-  totalScoreWithHowRoundNeedsToEnd,
-} = require('./day-2/rock-paper-scissors');
+const CalorieCounting = require('./day-1/puzzle');
+const RockPaperScissors = require('./day-2/puzzle');
 
-const caloriesList = fs.readFileSync('src/day-1/input.txt', 'UTF-8');
-const strategyGuide = fs.readFileSync('src/day-2/input.txt', 'UTF-8');
+const getInput = (day) => fs.readFileSync(`src/day-${day}/input.txt`, 'UTF-8');
+
+const calorieCounting = new CalorieCounting(getInput('1'));
+const rockPaperScissors = new RockPaperScissors(getInput('2'));
 
 const answers = {
   'Day 1: Calorie Counting': {
-    'Part One': findMostCaloriesCarried(caloriesList),
-    'Part Two': totalCaloriesCarriedByTopThreeElves(caloriesList),
+    'Part One': calorieCounting.answer1,
+    'Part Two': calorieCounting.answer2,
   },
   'Day 2: Rock Paper Scissors': {
-    'Part One': totalScoreWithWhatYouShouldPlay(strategyGuide),
-    'Part Two': totalScoreWithHowRoundNeedsToEnd(strategyGuide),
+    'Part One': rockPaperScissors.answer1,
+    'Part Two': rockPaperScissors.answer2,
   },
 };
 
