@@ -8,11 +8,11 @@ class CalorieCounting {
     );
   }
 
-  get answer1() {
+  get part1() {
     return this.caloriesPerElf.reduce((a, b) => Math.max(a, b));
   }
 
-  get answer2() {
+  get part2() {
     return this.caloriesPerElf
       .sort((a, b) => a - b)
       .slice(-3)

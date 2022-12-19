@@ -3,7 +3,7 @@ class RucksackReorganization {
     this.rucksacks = input.split('\n').map((rucksack) => rucksack.split(''));
   }
 
-  get answer1() {
+  get part1() {
     return this.rucksacks
       .map((itemTypes) => [
         itemTypes.slice(0, itemTypes.length / 2),
@@ -18,7 +18,7 @@ class RucksackReorganization {
       .reduce((a, b) => a + b);
   }
 
-  get answer2() {
+  get part2() {
     const groups = [];
 
     const groupSize = 3;

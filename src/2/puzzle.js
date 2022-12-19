@@ -7,7 +7,7 @@ class RockPaperScissors {
     this.yourOutcomes = { X: 'lose', Y: 'draw', Z: 'win' };
   }
 
-  get answer1() {
+  get part1() {
     return this.rounds
       .map((round) => [
         this.opponentShapes[round[0]],
@@ -17,7 +17,7 @@ class RockPaperScissors {
       .reduce((a, b) => a + b);
   }
 
-  get answer2() {
+  get part2() {
     return this.rounds
       .map((round) => [
         this.opponentShapes[round[0]],

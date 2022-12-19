@@ -1,9 +1,9 @@
 const fs = require('node:fs');
-const CalorieCounting = require('./day-1/puzzle');
-const RockPaperScissors = require('./day-2/puzzle');
-const RucksackReorganization = require('./day-3/puzzle');
+const CalorieCounting = require('./1/puzzle');
+const RockPaperScissors = require('./2/puzzle');
+const RucksackReorganization = require('./3/puzzle');
 
-const getInput = (day) => fs.readFileSync(`src/day-${day}/input.txt`, 'UTF-8');
+const getInput = (day) => fs.readFileSync(`src/${day}/input.txt`, 'UTF-8');
 
 const calorieCounting = new CalorieCounting(getInput('1'));
 const rockPaperScissors = new RockPaperScissors(getInput('2'));
@@ -11,16 +11,16 @@ const rucksackReorganization = new RucksackReorganization(getInput('3'));
 
 const answers = {
   'Day 1: Calorie Counting': {
-    'Part One': calorieCounting.answer1,
-    'Part Two': calorieCounting.answer2,
+    'Part One': calorieCounting.part1,
+    'Part Two': calorieCounting.part2,
   },
   'Day 2: Rock Paper Scissors': {
-    'Part One': rockPaperScissors.answer1,
-    'Part Two': rockPaperScissors.answer2,
+    'Part One': rockPaperScissors.part1,
+    'Part Two': rockPaperScissors.part2,
   },
   'Day 3: Rucksack Reorganization': {
-    'Part One': rucksackReorganization.answer1,
-    'Part Two': rucksackReorganization.answer2,
+    'Part One': rucksackReorganization.part1,
+    'Part Two': rucksackReorganization.part2,
   },
 };
 

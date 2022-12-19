@@ -18,9 +18,9 @@ const input = `1000
 const calorieCounting = new CalorieCounting(input);
 
 test('answer for part 1 is 24000', () => {
-  expect(calorieCounting.answer1).toStrictEqual(24000);
+  expect(calorieCounting.part1).toStrictEqual(24000);
 });
 
 test('answer for part 2 is 45000', () => {
-  expect(calorieCounting.answer2).toStrictEqual(45000);
+  expect(calorieCounting.part2).toStrictEqual(45000);
 });
