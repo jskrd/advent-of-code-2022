@@ -4,6 +4,7 @@ const RockPaperScissors = require('./2/puzzle');
 const RucksackReorganization = require('./3/puzzle');
 const CampCleanup = require('./4/puzzle');
 const SupplyStacks = require('./5/puzzle');
+const TuningTrouble = require('./6/puzzle');
 
 const getInput = (day) => fs.readFileSync(`src/${day}/input.txt`, 'UTF-8');
 
@@ -12,6 +13,7 @@ const rockPaperScissors = new RockPaperScissors(getInput('2'));
 const rucksackReorganization = new RucksackReorganization(getInput('3'));
 const campCleanup = new CampCleanup(getInput('4'));
 const supplyStacks = new SupplyStacks(getInput('5'));
+const tuningTrouble = new TuningTrouble(getInput('6'));
 
 const answers = {
   'Day 1: Calorie Counting': {
@@ -33,6 +35,10 @@ const answers = {
   'Day 5: Supply Stacks': {
     'Part One': supplyStacks.part1,
     'Part Two': supplyStacks.part2,
+  },
+  'Day 6: Tuning Trouble': {
+    'Part One': tuningTrouble.part1,
+    'Part Two': tuningTrouble.part2,
   },
 };
 
