@@ -1,0 +1,22 @@
+name: Test
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Install packages
+        uses: docker://node:18-alpine
+        with:
+          entrypoint: npm
+          args: install
+      - name: Run tests
+        uses: docker://node:18-alpine
+        with:
+          entrypoint: npm
+          args: run test
